@@ -1,8 +1,31 @@
+# Vercel Ignore Patterns
+
+# Dependencies (will be installed via composer)
 /vendor
-   * `APP_KEY`
-    * `DB_CONNECTION` (mysql)
-    * `DB_HOST`
-    * `DB_PORT`
-    * `DB_DATABASE`
-    * `DB_USERNAME`
-    * `DB_PASSWORD`
+
+# Build/Cache
+/node_modules
+/bootstrap/cache
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/views
+
+# Environment (use Vercel env variables instead)
+.env
+.env.local
+.env.*.local
+
+# Development & Testing
+.git
+.github
+.gitignore
+tests/
+phpunit.xml
+
+# IDE & OS
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
