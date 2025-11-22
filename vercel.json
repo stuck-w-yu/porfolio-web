@@ -2,7 +2,7 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/[...slug].php": { "runtime": "vercel-php@0.6.0" }
     },
     "routes": [
         {
@@ -11,11 +11,11 @@
         },
         {
             "src": "/(.*)",
-            "dest": "/api/index.php"
+            "dest": "/api/[...slug].php"
         }
     ],
     "installCommand": "composer install",
-    "buildCommand": "npm run build && composer install",
+    "buildCommand": "npm run build",
     "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
