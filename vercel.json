@@ -14,7 +14,7 @@
             "dest": "/api/[...slug].php"
         }
     ],
-    "installCommand": "composer install",
+    "installCommand": "php -r 'copy(\"https://getcomposer.org/installer\", \"composer-setup.php\");' && php composer-setup.php --install-dir=/tmp && php /tmp/composer.phar install --no-interaction --prefer-dist --no-dev && rm composer-setup.php",
     "buildCommand": "npm run build",
     "outputDirectory": "public",
     "env": {
