@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/sh
+set -eu
 
 # vercel-install.sh
 # Download composer.phar and run composer install in a CI-friendly, non-interactive way.
